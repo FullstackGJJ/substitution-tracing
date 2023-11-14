@@ -1,0 +1,8 @@
+;; -*- scheme -*-
+((synopsis "Allow to see the workflow of procedure definition through substitution model tracing")
+ (author "Hank Lin")
+ (category debugging)
+ (dependencies srfi-113 srfi-128)
+ (license "Unlicense")
+ (components
+  (extension substitution-tracing)))
