@@ -268,6 +268,10 @@
 (define (eval-without-trace exp env ind)
   (eval-with-trace-handler exp env ind))
 
+(define-syntax display_input_as_entered
+  (syntax-rules ()
+    ((_ exp) 'exp)))
+
 (define (eval-with-trace exp env ind)
   (let ((result (eval-with-trace-handler exp env ind)))
        (print (format "~A" (make-string ind #\ )) exp " ==> " result)
